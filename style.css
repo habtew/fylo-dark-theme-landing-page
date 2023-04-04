@@ -26,8 +26,10 @@ body{
     margin: 0;
     padding: 0;
     font-size: 14px;
+    font-family: var(--font-bdy);
     background-color: black;
     color: white;
+    text-align: center;
 }
 
 ul{
@@ -40,7 +42,17 @@ img{
     max-width: 100%;
 }
 
+h3{
+    font-weight: 700;
+}
 
+p{
+    font-weight: 400;
+}
+
+section{
+    margin-block: 150px;
+}
 /* layout */
 
 .container{
@@ -63,4 +75,100 @@ nav ul{
 
 nav img{
     width: 90px;
+}
+
+/* intro section layout */
+
+.intro-section{
+    padding: 1em;
+}
+
+.intro-section .intro-btn{
+  padding: 1.2em 6em;
+  margin-top: 1em;
+  border-radius: 25px;
+  border: none;
+} 
+
+/* features layout */
+.features-section{
+    margin: 100px 0 100px 0;
+}
+
+.features-section div{
+    margin-top: 50px;
+}
+
+
+/* stay productive section */
+
+.stay-productive-section{
+    margin-top: 50px;
+}
+
+/* testimonial layout */
+
+.testimonails{
+    width: 80%;
+    /* height: 150px; */
+    background: green;
+    padding: 1em;
+    text-align: left;
+    margin: 25px auto;
+}
+
+.testimonails .testimonail-profile{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.testimonail-profile img{
+    border-radius: 50%;
+    width: 40px;
+    margin-right: 10px;
+}
+
+.testimonail-profile h3{
+    margin: 0;
+    font-weight: 400;
+}
+
+.testimonail-profile p{
+    margin: 0;
+    font-weight: 100;
+}
+/* typography */
+
+header{
+    background: var(--clr-main-bg);
+    font-family: var(--font-header);
+}
+
+main{
+    background: var(--clr-main-bg);
+}
+
+.intro-section h3{
+    font-size: 25px;
+}
+
+.intro-section .intro-btn{
+    background: var(--clr-cell-to-blue);
+    color: var(--clr-white)
+} 
+
+
+
+.stay-productive-section{
+    text-align: left;
+}
+
+.stay-productive-content a{
+    color: var(--clr-cell-to-cyan);
+    display: flex;
+    column-gap: 10px;
+    border-bottom: 1px solid var(--clr-cell-to-cyan);
+    width: fit-content;
+    padding: .5em;
 }

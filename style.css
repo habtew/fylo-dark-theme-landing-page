@@ -50,8 +50,15 @@ p{
     font-weight: 400;
 }
 
+button{
+    cursor: pointer;
+}
+
 section{
     margin-block: 150px;
+}
+main{
+    position: relative;
 }
 /* layout */
 
@@ -92,7 +99,10 @@ nav img{
 
 /* features layout */
 .features-section{
-    margin: 100px 0 100px 0;
+    margin: 100px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-gap: 20px;
 }
 
 .features-section div{
@@ -107,7 +117,11 @@ nav img{
 }
 
 /* testimonial layout */
-
+.testimonial-section{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    margin-bottom: 250px
+}
 .testimonails{
     width: 80%;
     /* height: 150px; */
@@ -115,6 +129,7 @@ nav img{
     padding: 1em;
     text-align: left;
     margin: 25px auto;
+    
 }
 
 .testimonails .testimonail-profile{
@@ -137,6 +152,50 @@ nav img{
 .testimonail-profile p{
     margin: 0;
     font-weight: 100;
+}
+
+/* form section */
+.form-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1em 0;
+    margin: 20px auto;
+    position: absolute;
+    bottom: -150px;
+    left: 20px;
+    right: 20px;
+}
+
+.form-section form{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    
+}
+
+.form-section input,
+.form-section button{
+    padding: 1.2em 6em;
+    margin-top: 1em;
+    border-radius: 25px;
+    border: none;
+    margin-bottom: 15px;
+}
+/* footer layout */
+
+footer{
+    text-align: left;
+    padding: 10em 2.5em 2em;
+}
+
+footer img{
+    margin-right: 20px;
+    text-align: center;
+}
+
+footer .socail{
+    display: none;
 }
 /* typography */
 
@@ -171,4 +230,77 @@ main{
     border-bottom: 1px solid var(--clr-cell-to-cyan);
     width: fit-content;
     padding: .5em;
+}
+
+.testimonails{
+    background: var(--clr-test-bg);
+
+}
+
+.form-section{
+    background: var(--clr-form-bg);
+}
+
+.form-section button{
+    background: var(--clr-cell-to-blue);
+    color: var(--clr-white)
+}
+
+footer{
+    background: var(--clr-footer-bg);
+}
+
+@media (min-width: 450px){
+    
+    section{
+        width: 400px;
+        margin: 0 auto;
+    }
+    nav ul{
+        width: 200px;
+    }
+
+    .testimonial-section{
+        width: 80%;
+    }
+
+}
+
+@media (min-width:730px){
+    section{
+        width: 720px;
+
+    }
+/* 
+    footer{
+        
+    } */
+    .form-section{
+        padding: 2em   
+    }
+
+    .form-section form{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .form-section button{
+        padding: 1.2em 2em;
+        margin-left: 10px;
+    }
+    footer .container{
+        display: flex;
+        justify-content: space-between;
+        width: 80%;
+        margin: 40px auto;
+    }
+
+    footer .fylo-location{
+        width: 400px;
+    }
+    footer .socail{
+        display: flex;
+        justify-content: space-between;
+        width: 100px;
+    }
 }

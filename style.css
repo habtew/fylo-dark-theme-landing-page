@@ -79,7 +79,10 @@ nav ul{
     width: 50%;
     justify-content: space-between;
 }
-
+nav ul li:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
 nav img{
     width: 90px;
 }
@@ -101,7 +104,7 @@ nav img{
 .features-section{
     margin: 100px auto;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-gap: 20px;
 }
 
@@ -114,6 +117,7 @@ nav img{
 
 .stay-productive-section{
     margin-top: 50px;
+    margin-bottom: 60px
 }
 
 /* testimonial layout */
@@ -124,8 +128,6 @@ nav img{
 }
 .testimonails{
     width: 80%;
-    /* height: 150px; */
-    background: green;
     padding: 1em;
     text-align: left;
     margin: 25px auto;
@@ -153,7 +155,16 @@ nav img{
     margin: 0;
     font-weight: 100;
 }
+.testimonial-one{
+    position: relative;
+}
 
+.quote-image{
+    position: absolute;
+    top: -30px;
+    left: -20px;
+    
+}
 /* form section */
 .form-section{
     display: flex;
@@ -176,12 +187,21 @@ nav img{
 
 .form-section input,
 .form-section button{
-    padding: 1.2em 6em;
+    padding: .6em .6em;
     margin-top: 1em;
     border-radius: 25px;
     border: none;
     margin-bottom: 15px;
+    font-size: 1.3rem;
+    text-indent: 20px;
 }
+.form-section .invalid-email{
+    margin-left: 20px;
+    align-self: flex-start;
+    display: none;
+    
+}
+
 /* footer layout */
 
 footer{
@@ -196,6 +216,19 @@ footer img{
 
 footer .socail{
     display: none;
+}
+
+footer .socail .fa-brands{
+    width: fit-content;
+    height: fit-content;
+    font-size: 1.5rem;
+    padding: .5em;
+    border-radius: 50%;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.socail .fa-brands:hover{
+    box-shadow: var(--clr-cell-to-cyan) 0px 7px 29px 0px;
 }
 /* typography */
 
@@ -246,6 +279,10 @@ main{
     color: var(--clr-white)
 }
 
+.form-section .invalid-email{
+    color: var(--clr-error)
+}
+
 footer{
     background: var(--clr-footer-bg);
 }
@@ -267,26 +304,68 @@ footer{
 }
 
 @media (min-width:730px){
+    header{
+        padding-top: 40px;
+        font-size: 1.4rem;
+    }
+
+    nav ul{
+        width: 300px;
+    }
+    
     section{
-        width: 720px;
+        width: 80%;
 
     }
 /* 
     footer{
         
     } */
+    .features-section{
+        max-width: 800px;
+    }
+
+    .stay-productive-section{
+        width: 75%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .stay-productive-section img{
+        width: 50%;
+        margin-right: 40px;
+    }
+
+    .stay-productive-section .stay-productive-content{
+        width: 40%
+    }
+    .stay-productive-section .stay-productive-content h3{
+        font-weight: 700;
+        font-size: 3.5rem;
+    }
+
     .form-section{
-        padding: 2em   
+        padding: 2em ;
+        max-width: 900px;
     }
 
     .form-section form{
         display: flex;
         flex-direction: row;
+       justify-content: space-between;
+       width: 100%
+        
+    }
+    .form-section input{
+        width: 60%;
     }
 
+
     .form-section button{
-        padding: 1.2em 2em;
+        /* padding: 1.2em 2em; */
         margin-left: 10px;
+        width: 40%;
     }
     footer .container{
         display: flex;
